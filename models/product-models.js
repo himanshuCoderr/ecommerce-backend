@@ -13,7 +13,7 @@ const productSchema =new mongoose.Schema({
     isFeatured : {type : Boolean} ,
     variants  : [{type: String , required : true}] ,
     deliveryInfo : {type : String , default : "Delivered in 5-7 business days"} ,
-    warranty : "2 year Warranty",
+    warranty : [{type:String}],
     seller : {type : String},
     rating : {type : Number},
     numReviews : {type : Number} , 
@@ -22,6 +22,8 @@ const productSchema =new mongoose.Schema({
     createdBy : {type : String} , 
     updatedBy : {type :String}
 })
+
+
 
 
 // _id
